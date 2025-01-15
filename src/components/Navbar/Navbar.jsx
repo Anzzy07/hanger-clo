@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 
 import { UserContext } from "../../context/user.context";
+import { CartContext } from "../../context/cart.context";
 import { ReactComponent as Crown } from "../../assets/crown.svg";
 import "./Navbar.style.scss";
 import { signOutUser } from "../../utils/firebase";
@@ -10,6 +11,7 @@ import { CartDropdown } from "../cart-dropdown/CartDropdown";
 
 export const Navbar = () => {
   const { currentUser } = useContext(UserContext);
+  const { isCartOpen } = useContext(CartContext);
 
   return (
     <>
@@ -32,7 +34,7 @@ export const Navbar = () => {
           )}
           <CartIcon />
         </div>
-        <CartDropdown />
+        {isCartOpen && <CartDropdown />}
       </div>
     </>
   );
