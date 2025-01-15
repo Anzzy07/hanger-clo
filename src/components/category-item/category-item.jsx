@@ -1,7 +1,6 @@
 import "./category-item.scss";
 
-export const CategoryItem = ({ category }) => {
-  const { imageUrl, title } = category;
+export const CategoryItem = ({ category: { imageUrl, title } }) => {
   return (
     <div className="category-container">
       <div
