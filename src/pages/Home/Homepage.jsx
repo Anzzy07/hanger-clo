@@ -2,5 +2,9 @@ import React from "react";
 import { Directory } from "../../components/directory/Directory";
 
 export const Homepage = () => {
-  return <Directory />;
+  return (
+    <div>
+      <Directory />
+    </div>
+  );
 };

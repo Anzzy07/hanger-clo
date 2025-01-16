@@ -1,4 +1,4 @@
-import { CategoryItem } from "../category-item/category-item";
+import { DirectoryItem } from "../directory-item/directory-item";
 import "./Directory.style.scss";
 
 export const Directory = () => {
@@ -33,7 +33,7 @@ export const Directory = () => {
   return (
     <div className="directory-container">
       {categories.map((category) => (
-        <CategoryItem key={category.id} category={category} />
+        <DirectoryItem key={category.id} category={category} />
       ))}
     </div>
   );
